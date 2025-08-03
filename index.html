@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-repeat: initial;
+            color: blueviolet;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola Profe</h1>
+    <button onclick="cambiadecolor('black')">Cambiar color</button>
+    <button onclick="cambiadefondo('lightblue;Green;red')">Cambiar fondo</button>
+    <button onclick="cambiadefuente('Arial')">Cambiar fuente</button>
+
+    <script>
+        function cambiadecolor(black) {
+            document.body.style.color = black;
+        }
+        const coloresFondo = ['lightblue', 'Green', 'red'];
+        let indiceColor = 0;
+        function cambiadefondo() {
+             document.body.style.backgroundColor = coloresFondo[indiceColor];
+             indiceColor = (indiceColor + 1) % coloresFondo.length;
+        }
+
+        function cambiadefuente(Arial) {
+            document.body.style.fontFamily = Arial;
+        }
+    </script>
+</body>
+</html>
